@@ -1,0 +1,86 @@
+@keyframes colorchange
+{
+  0%   {background: #E1EEFF;}
+  25%  {background: #FFF9E1;}
+  50%  {background: #E1FFEB;}
+  75%  {background: #F1E1FF;}
+  100% {background: #FFE1E1;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: #E1EEFF;}
+  25%  {background: #FFF9E1;}
+  50%  {background: #E1FFEB;}
+  75%  {background: #F1E1FF;}
+  100% {background: #FFE1E1;}
+}
+
+.desktop {
+  width               : 100%;
+  min-width           : 1024px;
+  height              : 100vh;
+  min-height          : 1024px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*background-color    : rgba(255, 248, 224, 1.0);*/
+  animation-direction: alternate;
+  animation: colorchange 30s;
+  -webkit-animation: colorchange 30s infinite; /* Chrome and Safari */
+  -webkit-animation-direction: alternate;
+}
+a {
+  text-decoration           : none;
+  color                     : white;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: #483737;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.desktop .logobigass {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 135px;
+  height              : 153px;
+  width               : 597px;
+  position            : absolute;
+  margin              : 0;
+  left                : 214px;
+}
+.desktop .ciordiebaby {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 759px;
+  height              : 81px;
+  width               : 418px;
+  position            : absolute;
+  margin              : 0;
+  left                : 306px;
+}
+.desktop .github {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 24px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 923px;
+  font-family         : "AvenirNext-BoldItalic", Helvetica, Arial, serif;
+  font-size           : 20.73px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 29.0px;
+  text-shadow         : 2px 2px 0px #483737;
+  -webkit-text-stroke : .5px #483737;
+}
+.desktop .terraform {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 353px;
+  height              : 346px;
+  width               : 384px;
+  position            : absolute;
+  margin              : 0;
+  left                : 323px;
+}
