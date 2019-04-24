@@ -2,7 +2,7 @@
 
 #### what's a casale?????????
 > *(kaˈsalee)*  
-> noun, italian
+> noun, italian  
 > home
 
 ---
