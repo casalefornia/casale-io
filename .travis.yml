@@ -1,8 +1,9 @@
 language: python
 cache: pip
+install:
+  - pip install awscli
 
 before_deploy:
-  - pip install --user awscli
   - echo 'this site was updated by travis with build id $TRAVIS_BUILD_ID' > ${TRAVIS_BUILD_DIR}/build.txt
   
 deploy:
