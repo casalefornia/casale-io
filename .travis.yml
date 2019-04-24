@@ -3,9 +3,9 @@ cache: pip
 install:
   - pip install awscli
 script:
-  - echo 'let's GO, DAWG!'
+  - echo "let's GO, DAWG!"
 before_deploy:
-  - echo 'this site was updated by travis with build id $TRAVIS_BUILD_ID' > ${TRAVIS_BUILD_DIR}/build.txt
+  - echo "this site was updated by travis with build id $TRAVIS_BUILD_ID" > ${TRAVIS_BUILD_DIR}/build.txt
 deploy:
   on:
     branch: master
