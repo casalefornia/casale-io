@@ -1,10 +1,20 @@
+language: python
+cache: pip
+
 before_deploy:
   - pip install --user awscli
-  - echo 'this site was updated by travis with build id ${TRAVIS_BUILD_ID}' > ${TRAVIS_BUILD_DIR}/build.txt
+  - echo 'this site was updated by travis with build id $TRAVIS_BUILD_ID' > ${TRAVIS_BUILD_DIR}/build.txt
+  
 deploy:
+  on:
+    branch: master
   provider: s3
-  access_key_id: "${AWS_ACCESS_KEY}"
-  secret_access_key: "${AWS_SECRET_ACCESS_KEY}"
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: casale.io
   skip_cleanup: true
   acl: public_read
   region: us-west-1
+  
+after_deploy:
+  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
