@@ -1,8 +1,8 @@
 ## casale.io
 
 #### what's a casale?????????
-*(kaˈsalee)*  
-noun, italian
+> *(kaˈsalee)*  
+> noun, italian
 > home
 
 ---
