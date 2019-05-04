@@ -12,6 +12,5 @@ deploy:
   - export AWS_ACCESS_KEY=$AWS_ACCESS_KEY
   - export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
   - aws s3 cp $TRAVIS_BUILD_DIR/ s3://casale.io/
-
 after_deploy:
   - aws cloudfront create-invalidation --distribution-id E16QZCXFF2GO4 --paths "/*"
