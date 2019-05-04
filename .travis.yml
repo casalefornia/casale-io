@@ -7,8 +7,6 @@ script:
 before_deploy:
   - echo "this site was updated by travis with build id $TRAVIS_BUILD_ID" > $TRAVIS_BUILD_DIR/build.txt
 deploy:
-  on:
-    branch: master
   - export AWS_ACCESS_KEY=$AWS_ACCESS_KEY
   - export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
   - aws s3 cp $TRAVIS_BUILD_DIR/ s3://casale.io/
